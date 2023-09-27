@@ -1,0 +1,45 @@
+#switch__checkbox {
+  height: 0;
+  opacity: 0;
+  width: 0;
+}
+
+.switch__toggle {
+  background: rgba(157, 157, 157, 1);
+  border-radius: 24px;
+  cursor: pointer;
+  display: inline-block;
+  height: 32px;
+  overflow: hidden;
+  position: relative;
+  transition: 500ms;
+  width: 68px;
+}
+
+.switch__toggle_button {
+  align-items: center;
+  background: #f7ffff;
+  border-radius: 50%;
+  display: flex;
+  height: 24px;
+  justify-content: center;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  top: 4px;
+  transition: all 500ms ease-out;
+  width: 24px;
+}
+
+#switch__checkbox:checked + .switch__toggle {
+  background: rgba(50, 50, 50, 1);
+}
+
+#switch__checkbox:checked + .switch__toggle .switch__toggle_button {
+  background: rgba(23, 26, 35, 1);
+  transform: translateX(36px);
+}
+
+#switch__checkbox:checked + .switch__toggle .switch__toggle_button .crater {
+  transform: rotate(-45deg) translateX(70px);
+}
